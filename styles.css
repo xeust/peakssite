@@ -1,0 +1,441 @@
+:root {
+  --color-bg: #fafafa;
+  --p0: #63678b;
+  --p1: #7b92f2;
+  --z0: #2b2e4a;
+  --z1: #515368;
+  --z2: #7c7d83;
+  --r0: #996262;
+  --r1: #b84444;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Fluid typography formula */
+@media (min-width: 640px) and (max-width: 1439px) {
+  html {
+    font-size: calc(16px + (18 - 16) * (100vw - 640px) / (1439 - 640));
+  }
+}
+
+/* Define max font size */
+@media (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--z0);
+  background-color: var(--color-bg);
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.container {
+  padding: 0.5rem 15rem;
+}
+
+.eo-lg {
+  display: inherit;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--z0);
+}
+
+.logo-container:hover {
+  color: var(--p1);
+}
+
+.logo-title {
+  font-weight: 400;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--p0);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--p1);
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.section {
+  margin: 2rem 0rem;
+}
+
+.header {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.section-header {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.section-content {
+  padding: 2rem 0rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.info {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+a {
+  color: var(--p0);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--p1);
+}
+
+.img {
+  object-fit: contain;
+}
+
+.peaks-graph {
+  max-width: 100%;
+}
+
+.experiment-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 500;
+  color: var(--z2);
+  cursor: pointer;
+}
+
+.option:hover {
+  color: var(--p1);
+}
+
+.selected {
+  color: var(--p1) !important;
+  text-decoration: underline;
+}
+
+.option-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.option-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.experiment-options-sm {
+  display: flex;
+  flex-direction: column;
+}
+
+.eo-sm {
+  display: none;
+}
+
+.using-sm {
+  display: none;
+}
+
+details {
+  font-size: 1.2rem;
+  font-weight: 400;
+  user-select: none;
+}
+
+details > summary span.toggle {
+  transition: all 0.3s;
+  margin-left: auto;
+}
+
+details[open] summary span.toggle {
+  transform: rotate(45deg);
+}
+
+details[open] summary span {
+  color: var(--z2);
+  font-weight: 400;
+  text-decoration: none !important;
+}
+
+details[open] summary div.details-title {
+  color: var(--p1);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+summary {
+  font-size: 1.5rem;
+  color: var(--z2);
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.highlight {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.code-container {
+  background-color: white;
+  padding: 0.2rem 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0.0625rem solid var(--p0);
+  border-radius: 0.1875rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  row-gap: 1rem;
+  justify-content: space-between;
+}
+
+.us-header {
+  color: var(--z2);
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.us-header:hover {
+  color: var(--p1);
+}
+
+.try-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.try-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-footer {
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+}
+
+.pricing-header {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.cards {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.card {
+  background-color: white;
+  padding: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 0.0625rem solid var(--p0);
+  border-radius: 0.1875rem;
+  min-width: 18rem;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.price {
+  padding: 0.5rem 0rem;
+  border-bottom: 0.125rem solid var(--p0);
+  margin-bottom: 0.3rem;
+}
+
+.feature {
+  padding: 0.3rem 0rem;
+  color: var(--z2);
+}
+
+button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: var(--p0);
+  border-radius: 0.2rem;
+  font-size: 1.125rem;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .container {
+    padding: 0.5rem 15rem;
+  }
+  .eo-sm {
+    display: none;
+  }
+  .using-sm {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    padding: 0.5rem 9rem;
+  }
+  .eo-sm {
+    display: none;
+  }
+  .using-sm {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .container {
+    padding: 0.5rem 6rem;
+  }
+  .eo-lg {
+    display: none;
+  }
+  .using-lg {
+    display: none;
+  }
+  .eo-sm {
+    display: inherit;
+  }
+  .using-sm {
+    display: inherit;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0.5rem 3rem;
+  }
+  .eo-sm {
+    display: inherit;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    padding: 0.5rem 1.5rem;
+  }
+  .eo-sm {
+    display: inherit;
+  }
+
+  .using-sm {
+    display: inherit;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0.5rem 0.75rem;
+  }
+  .eo-sm {
+    display: inherit;
+  }
+  .using-sm {
+    display: inherit;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0.5rem 0.1rem;
+  }
+  .eo-sm {
+    display: inherit;
+  }
+  .using-sm {
+    display: inherit;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
