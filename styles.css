@@ -143,6 +143,7 @@ a:hover {
 
 .peaks-graph {
   max-width: 100%;
+  display: flex;
 }
 
 .experiment-options {
@@ -161,6 +162,16 @@ a:hover {
 .selected {
   color: var(--p1) !important;
   text-decoration: underline;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.important-memo { 
+  color: var(--r1);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .option-content {
@@ -184,10 +195,6 @@ a:hover {
 }
 
 .eo-sm {
-  display: none;
-}
-
-.using-sm {
   display: none;
 }
 
@@ -277,13 +284,12 @@ summary::-webkit-details-marker {
 
 .footer {
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .pricing-footer {
-  position: absolute;
-  bottom: 0;
-  height: 2.5rem;
+  padding-top: 1rem;
+  margin-top: auto;
 }
 
 .pricing-header {
@@ -309,6 +315,7 @@ summary::-webkit-details-marker {
   border-radius: 0.1875rem;
   min-width: 18rem;
 }
+
 
 .card-header {
   font-weight: bold;
@@ -337,14 +344,26 @@ button {
   margin-top: 1rem;
 }
 
+.try-svg-container {
+  display: flex;
+}
+
+.try-svg {
+  object-fit: contain;
+  width: 15rem;
+}
+
+.option-svg {
+  object-fit: contain;
+  width: 20rem;
+}
+
+
 @media only screen and (max-width: 1440px) {
   .container {
     padding: 0.5rem 15rem;
   }
   .eo-sm {
-    display: none;
-  }
-  .using-sm {
     display: none;
   }
 }
@@ -354,9 +373,6 @@ button {
     padding: 0.5rem 9rem;
   }
   .eo-sm {
-    display: none;
-  }
-  .using-sm {
     display: none;
   }
 }
@@ -374,9 +390,7 @@ button {
   .eo-sm {
     display: inherit;
   }
-  .using-sm {
-    display: inherit;
-  }
+
   .cards {
     flex-direction: column;
   }
@@ -392,6 +406,12 @@ button {
   .cards {
     flex-direction: column;
   }
+  .try-svg {
+    width: 12rem;
+  }
+  .peaks-graph {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -402,11 +422,11 @@ button {
     display: inherit;
   }
 
-  .using-sm {
-    display: inherit;
-  }
   .cards {
     flex-direction: column;
+  }
+  .try-svg {
+    width: 10rem;
   }
 }
 
@@ -417,25 +437,53 @@ button {
   .eo-sm {
     display: inherit;
   }
-  .using-sm {
+
+  .cards {
+    flex-direction: column;
+  }
+  
+  .try-svg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 0.5rem 0.5rem;
+  }
+  .eo-sm {
     display: inherit;
   }
+
   .cards {
     flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .container {
-    padding: 0.5rem 0.1rem;
+  html {
+    font-size: 15px;
   }
-  .eo-sm {
-    display: inherit;
+
+} 
+
+
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 12px;
   }
-  .using-sm {
-    display: inherit;
-  }
-  .cards {
-    flex-direction: column;
-  }
+} 
+
+.install-svg {
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+  border: 0.1rem var(--z0) solid;
 }
+
+.pricing-container {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 99vh;
+}
+
