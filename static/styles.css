@@ -88,11 +88,11 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 4rem;
+  padding: 1rem 0rem;
 }
 
 .section {
-  margin: 2rem 0rem;
+  padding: 5rem 0rem;
 }
 
 .header {
@@ -142,17 +142,19 @@ a:hover {
 }
 
 .peaks-graph {
-  max-width: 100%;
+  max-width: 125%;
+  width: 105%;
   display: flex;
 }
 
 .experiment-options {
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-weight: 500;
   color: var(--z2);
   cursor: pointer;
+  margin-bottom: 4rem;
 }
 
 .option:hover {
@@ -162,6 +164,7 @@ a:hover {
 .selected {
   color: var(--p1) !important;
   text-decoration: underline;
+  font-weight: 500;
 }
 
 .link {
@@ -239,7 +242,13 @@ summary::-webkit-details-marker {
 .highlight {
   font-size: 1rem;
   font-weight: normal;
+  font-family: monospace;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select:text;
 }
+
 
 .code-container {
   background-color: white;
@@ -249,8 +258,23 @@ summary::-webkit-details-marker {
   text-overflow: ellipsis;
   border: 0.0625rem solid var(--p0);
   border-radius: 0.1875rem;
+  color: var(--z2);
 }
-
+.inline-code {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.code-container:hover {
+  color: var(--z0);
+  border: 0.0625rem solid var(--p1);
+}
+.update {
+  padding: 1rem;
+}
+pre {
+  margin: 0;
+}
 .grid {
   display: grid;
   grid-template-columns: auto auto;
@@ -358,6 +382,9 @@ button {
   width: 20rem;
 }
 
+.using-sm {
+  margin-top: 1rem;
+}
 
 @media only screen and (max-width: 1440px) {
   .container {
@@ -382,9 +409,6 @@ button {
     padding: 0.5rem 6rem;
   }
   .eo-lg {
-    display: none;
-  }
-  .using-lg {
     display: none;
   }
   .eo-sm {
@@ -476,8 +500,8 @@ button {
 
 .install-svg {
   margin-top: 1rem;
-  border-radius: 0.2rem;
-  border: 0.1rem var(--z0) solid;
+  border-radius: 0.3rem;
+  border: 0.15rem var(--z0) solid;
 }
 
 .pricing-container {
