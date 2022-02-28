@@ -5,6 +5,7 @@
   --z0: #2b2e4a;
   --z1: #515368;
   --z2: #7c7d83;
+  --z3: #a4a6af;
   --r0: #996262;
   --r1: #b84444;
 }
@@ -76,12 +77,13 @@ body {
 }
 
 .nav-link {
-  color: var(--p0);
+  color: var(--z3);
   text-decoration: none;
 }
 
 .nav-link:hover {
   color: var(--p1);
+  text-decoration: none;
 }
 
 .navbar {
@@ -96,6 +98,7 @@ body {
 }
 
 .header {
+  padding: 2rem 0rem;
   font-size: 3.5rem;
   font-weight: 400;
 }
@@ -126,15 +129,18 @@ body {
 
 .info {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
+  padding-bottom: 1rem;
 }
+
 a {
-  color: var(--p0);
+  color: var(--p1);
   text-decoration: none;
 }
 
 a:hover {
   color: var(--p1);
+  text-decoration: underline;
 }
 
 .img {
@@ -174,7 +180,8 @@ a:hover {
 .important-memo { 
   color: var(--r1);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .option-content {
@@ -189,7 +196,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: auto;
+  margin-left: 60px;
 }
 
 .experiment-options-sm {
@@ -303,6 +310,7 @@ pre {
 .try-info {
   display: flex;
   flex-direction: column;
+  max-width: 60%;
   justify-content: space-evenly;
 }
 
@@ -366,6 +374,11 @@ button {
   font-size: 1.125rem;
   padding: 0.5rem 2rem;
   margin-top: 1rem;
+}
+
+button:hover {
+  background-color: var(--p1);
+  cursor: pointer;
 }
 
 .try-svg-container {
@@ -501,7 +514,11 @@ button {
 .install-svg {
   margin-top: 1rem;
   border-radius: 0.3rem;
-  border: 0.15rem var(--z0) solid;
+  border: 0.1rem var(--z0) solid;
+}
+
+.install-svg:hover {
+  border: 0.1rem var(--p1) solid;
 }
 
 .pricing-container {
